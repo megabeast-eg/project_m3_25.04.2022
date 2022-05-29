@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Конвертер Валют</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<wrapper>
+    <header>
+        <div class="header">
+        <div class="logo">
+            <div class="logo-bank"><img src="/img/img-bank-algo.png" alt=""></div>
+        </div>
+        <nav>
+            <ul>
+                <a href="#"><li class="nav-ul-li-active">Банк</li></a>
+                <a href="#"><li>Бизнес</li></a>
+                <a href="#"><li>Инвестиции</li></a>
+                <a href="#"><li>Страхование</li></a>
+                <a href="#"><li>Мобайл</li></a>
+                <a href="#"><li>Путешествия</li></a>
+                <a href="#"><li>Развлечения</li></a>
+            </ul>
+        </nav>
+            <button type="button" class="login-button">ВОЙТИ</button>
+        </div>
+    </header>
+    <section>
+        <div class="caption">
+        <h1>Конвертер валют онлайн</h1>
+         </div>
+       <div class="calc">
+           <div class="calc__side left">
+               <div class="calc__side__label">
+                 <p>У меня есть</p>
+               </div>
+               <div class="calc__side__switcher left">
+                    <div class="calc__side__switcher__item left  active">
+                        RUB 
+                    </div>
+                    <div class="calc__side__switcher__item left">
+                        USD
+                    </div>
+                    <div class="calc__side__switcher__item left">
+                        EUR
+                    </div>
+                    <div class="calc__side__switcher__item left">
+                        GBP
+                    </div>
+               </div>
+               <div class="calc__side__input">
+                <div class="calc__side__input__amount left">
+                    <input type="number" value=1 autofocus id="left-input" placeholder="у меня есть">
+                </div>
+                <div class="calc__side__input__rate left" id="left-rate">
+                   
+                </div>
+                </div>
+           </div>
+
+           <div class="calc__side right">
+            <div class="calc__side__label">
+              <p>Хочу приобрести</p>
+            </div>
+            <div class="calc__side__switcher right">
+                 <div class="calc__side__switcher__item right">
+                     RUB
+                 </div>
+                 <div class="calc__side__switcher__item right active">
+                     USD
+                 </div>
+                 <div class="calc__side__switcher__item right">
+                     EUR
+                 </div>
+                 <div class="calc__side__switcher__item right">
+                     GBP
+                 </div>
+            </div>
+            <div class="calc__side__input">
+                    <div class="calc__side__input__amount right">
+                        <input type="number"  id="right-input" placeholder="я получу">
+                    </div>
+                    <div class="calc__side__input__rate right" id="right-rate">
+                       
+                    </div>
+            </div>
+        </div>
+
+           
+       </div>
+    </section>
+</wrapper>
+<script src="./sctipt.js"></script>
+</body>
+</html>
