@@ -21,6 +21,7 @@ header{
     max-height: 60px;
     display: flex;
     align-items: center;
+    margin: 0 auto;
    
 }
 
@@ -47,7 +48,6 @@ li{
     font-size:11px;
 }
 .logo{
-    margin-left: 100px;
     margin-right: 65px;
 }
 
