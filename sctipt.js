@@ -60,7 +60,6 @@ function onActiveRight(event){
     })
     .then((data_right) =>{
         rateRight.innerText = `1 ${currencyRight} = ${(data_right.rates[currencyLeft]).toFixed(4)} ${currencyLeft}`;
-   
     })
     
     })
@@ -68,8 +67,24 @@ function onActiveRight(event){
         body.innerHTML = ' ';
         window.open('./404.htm', '_self');
     });
+} else if(currencyLeft == currencyRight){
+    inputRight.value = inputLeft.value;
+    rateRight.innerText = `1 ${currencyRight} = 1 ${currencyLeft}`;
+    rateLeft.innerText = `1 ${currencyLeft} = 1 ${currencyRight}`;
 }
 
+}
+
+async function reverseConvert (){
+    if(currencyLeft == currencyRight){
+     inputLeft.value = inputRight.value;
+     return
+    }
+   const respone = await fetch(`https://api.exchangerate.host/convert?from=${currencyRight}&to=${currencyLeft}&amount=${inputRight.value}&places=4`)
+    
+   const data = await respone.json();
+    inputLeft.value = data.result
+    console.log(data)
 }
 
 window.onload = convertCurrency;
@@ -83,9 +98,10 @@ switcherRight.forEach((e) =>{
 })
 
 
-inputLeft.addEventListener('keyup', function(event){
-    if(event.code == 'Enter'){
-        convertCurrency()
-    }
+inputLeft.addEventListener('input', function(event){
+    convertCurrency()
 })
 
+inputRight.addEventListener('input', function(event){
+    reverseConvert()
+})
